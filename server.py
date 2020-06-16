@@ -9,7 +9,7 @@ from twilio.twiml.messaging_response import Body, Message, Redirect, MessagingRe
 from twilio import twiml
 from flask import Flask, request, send_from_directory
 from flask_cors import CORS
-from fbchat import Client
+#from fbchat import Client
 from fbchat.models import *
 import getpass
 from pymongo import MongoClient
@@ -21,7 +21,7 @@ import os
 import schema as sch
 import twitter
 import threading
-from activetwitter import checkDMs
+#from activetwitter import checkDMs
 
 app = Flask(__name__, static_folder='build')
 messenger_instances = dict()
@@ -254,7 +254,8 @@ def do_signup():
 
 @app.route('/exit', methods = ['GET'])
 def exit():
-    client.logout()
+    #client.logout()
+    print("Hello")
 
 def close_running_threads():
     for thread in threads:

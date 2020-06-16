@@ -1,5 +1,4 @@
 from fbchat import Client
-from fbchat.models import *
 from datetime import datetime
 
 from twilio.rest import Client as twilClient
